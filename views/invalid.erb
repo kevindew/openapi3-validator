@@ -1,0 +1,27 @@
+<%
+  errors ||= {}
+  params ||= {}
+%>
+
+<h1>This file does not conform to the Openapi3 specification</h1>
+<p>Input URL was <%= h params[:url] %></p>
+
+<h2>Errors</h2>
+
+<ul class="list-group">
+  <% openapi.errors.each do |error| %>
+    <li class="list-group-item">
+      <ol class="breadcrumb">
+        <% pointer = error.context.document_location.pointer %>
+        <% pointer.segments.each do |segment| %>
+          <li class="breadcrumb-item">
+            <%= h segment %>
+          </li>
+        <% end %>
+      </ol>
+      <p class="mb-1"><%= h error.message %></p>
+      <small class="text-muted"><%= h error.context %></small>
+    </li>
+  <% end %>
+</ul>
+

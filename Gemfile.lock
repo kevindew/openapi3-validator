@@ -1,0 +1,53 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.4.0)
+    commonmarker (0.17.11)
+      ruby-enum (~> 0.5)
+    concurrent-ruby (1.0.5)
+    i18n (1.1.0)
+      concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.1)
+    mustermann (1.0.3)
+    openapi3_parser (0.5.2)
+      commonmarker (~> 0.17)
+    parallel (1.12.1)
+    parser (2.5.1.2)
+      ast (~> 2.4.0)
+    powerpack (0.1.2)
+    rack (2.0.5)
+    rack-protection (2.0.3)
+      rack
+    rainbow (3.0.0)
+    rubocop (0.58.2)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-enum (0.7.2)
+      i18n
+    ruby-progressbar (1.10.0)
+    sinatra (2.0.3)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.3)
+      tilt (~> 2.0)
+    tilt (2.0.8)
+    unicode-display_width (1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  openapi3_parser (~> 0.5)
+  rubocop (~> 0.58)
+  sinatra (~> 2)
+
+RUBY VERSION
+   ruby 2.5.1p57
+
+BUNDLED WITH
+   1.16.2

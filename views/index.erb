@@ -1,0 +1,22 @@
+<%
+  errors ||= {}
+  params ||= {}
+%>
+<form method="post" action="/validate">
+  <div class="form-group">
+    <label for="url">URL of openapi file</label>
+    <input type="url"
+           class="form-control <% if errors[:url] %>is-invalid<% end %>"
+           id="url"
+           name="url"
+           placeholder="https://example.com/openapi.yml"
+           required
+           value="<%= h params[:url] %>">
+    <% if errors[:url] %>
+      <div class="invalid-feedback">
+        <%= h errors[:url] %>
+      </div>
+    <% end %>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
